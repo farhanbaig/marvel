@@ -5,7 +5,6 @@
 - Combine Framework
 - UserDefaults used for data persistence
 
-
 ## Project Setup
 - Clone repo
 - Install packages via package manager.
@@ -18,6 +17,9 @@ Reason: To save development time.
 - NVActivityIndicatorView used to display activity indicator
 - Reason: To save development time.
 
+#### DI (Dependency Inversion)
+- For loose coupling by using abstraction
+- Easy for testing by mocking dependencies.
 
 #### Why Combine
 - No need to use multiple delegates and completion handlers
