@@ -43,6 +43,9 @@
 		A9D47BE227AFE3960016A7D7 /* CharacterViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D47BE127AFE3960016A7D7 /* CharacterViewModelTests.swift */; };
 		A9D47BE427AFE6700016A7D7 /* ListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D47BE327AFE6700016A7D7 /* ListViewModelTests.swift */; };
 		A9D47BE627AFE67F0016A7D7 /* DetailViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D47BE527AFE67F0016A7D7 /* DetailViewModelTests.swift */; };
+		A9D47BE927B004790016A7D7 /* NVActivityIndicatorView in Frameworks */ = {isa = PBXBuildFile; productRef = A9D47BE827B004790016A7D7 /* NVActivityIndicatorView */; };
+		A9D47BEB27B004790016A7D7 /* NVActivityIndicatorViewExtended in Frameworks */ = {isa = PBXBuildFile; productRef = A9D47BEA27B004790016A7D7 /* NVActivityIndicatorViewExtended */; };
+		A9D47BEF27B005A00016A7D7 /* UIViewController-Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D47BEE27B005A00016A7D7 /* UIViewController-Ext.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -102,6 +105,7 @@
 		A9D47BE127AFE3960016A7D7 /* CharacterViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterViewModelTests.swift; sourceTree = "<group>"; };
 		A9D47BE327AFE6700016A7D7 /* ListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewModelTests.swift; sourceTree = "<group>"; };
 		A9D47BE527AFE67F0016A7D7 /* DetailViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModelTests.swift; sourceTree = "<group>"; };
+		A9D47BEE27B005A00016A7D7 /* UIViewController-Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController-Ext.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +113,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A9D47BEB27B004790016A7D7 /* NVActivityIndicatorViewExtended in Frameworks */,
+				A9D47BE927B004790016A7D7 /* NVActivityIndicatorView in Frameworks */,
 				A9D47BBC27AD4EC40016A7D7 /* Kingfisher in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -246,6 +252,7 @@
 				A9D47BD027AD61070016A7D7 /* UserDefaults-Ext.swift */,
 				A9D47BDB27AEF07F0016A7D7 /* URL-Ext.swift */,
 				A9D47BDF27AFDD170016A7D7 /* UIImageView-Ext.swift */,
+				A9D47BEE27B005A00016A7D7 /* UIViewController-Ext.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -329,6 +336,8 @@
 			name = Marvel;
 			packageProductDependencies = (
 				A9D47BBB27AD4EC40016A7D7 /* Kingfisher */,
+				A9D47BE827B004790016A7D7 /* NVActivityIndicatorView */,
+				A9D47BEA27B004790016A7D7 /* NVActivityIndicatorViewExtended */,
 			);
 			productName = Marvel;
 			productReference = A941FD7927AB09FB0011031D /* Marvel.app */;
@@ -404,6 +413,7 @@
 			mainGroup = A941FD7027AB09FA0011031D;
 			packageReferences = (
 				A9D47BBA27AD4EC40016A7D7 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				A9D47BE727B004790016A7D7 /* XCRemoteSwiftPackageReference "NVActivityIndicatorView" */,
 			);
 			productRefGroup = A941FD7A27AB09FB0011031D /* Products */;
 			projectDirPath = "";
@@ -455,6 +465,7 @@
 				A941FDB927AB0E190011031D /* UIView-Ext.swift in Sources */,
 				A941FDCC27AB27F20011031D /* Response.swift in Sources */,
 				A9D47BDE27AFC1800016A7D7 /* SquadItemCell.swift in Sources */,
+				A9D47BEF27B005A00016A7D7 /* UIViewController-Ext.swift in Sources */,
 				A941FDB527AB0C850011031D /* CharacterListViewController.swift in Sources */,
 				A941FDC827AB17350011031D /* ListViewModel.swift in Sources */,
 				A941FDCF27AB2AEF0011031D /* MD5.swift in Sources */,
@@ -822,6 +833,14 @@
 				kind = branch;
 			};
 		};
+		A9D47BE727B004790016A7D7 /* XCRemoteSwiftPackageReference "NVActivityIndicatorView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ninjaprox/NVActivityIndicatorView.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -829,6 +848,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = A9D47BBA27AD4EC40016A7D7 /* XCRemoteSwiftPackageReference "Kingfisher" */;
 			productName = Kingfisher;
+		};
+		A9D47BE827B004790016A7D7 /* NVActivityIndicatorView */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A9D47BE727B004790016A7D7 /* XCRemoteSwiftPackageReference "NVActivityIndicatorView" */;
+			productName = NVActivityIndicatorView;
+		};
+		A9D47BEA27B004790016A7D7 /* NVActivityIndicatorViewExtended */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A9D47BE727B004790016A7D7 /* XCRemoteSwiftPackageReference "NVActivityIndicatorView" */;
+			productName = NVActivityIndicatorViewExtended;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

@@ -30,6 +30,7 @@ class CharacterListViewController: UITableViewController {
         tableView.register(ListRowCell.self, forCellReuseIdentifier: reuseIdentifier)
         setupNavbar()
         bindViewModel()
+        self.startAnimation()
         viewModel.fetch()
     }
 }
@@ -100,12 +101,14 @@ extension CharacterListViewController {
     private func bindViewModel() {
         // view model binding
         viewModel.characters.sink { [weak self] _ in
+            self?.stopAnimation()
             self?.tableView.reloadData()
         }
         .store(in: &cancellables)
-        viewModel.$error.sink { message in
+        viewModel.$error.sink { [weak self] message in
+            self?.stopAnimation()
             guard let message = message else {return}
-            self.presentAlert(message: message)
+            self?.presentAlert(message: message)
         }
         .store(in: &cancellables)
         
